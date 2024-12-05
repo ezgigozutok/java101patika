@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner klavye= new Scanner(System.in);
+        System.out.println("Matematik notunuzu giriniz:");
+        int math= klavye.nextInt();
+        System.out.println("Fizik notunuzu giriniz:");
+        int pyhsics= klavye.nextInt();
+        System.out.println("Kimya notunuzu giriniz:");
+        int chemicals= klavye.nextInt();
+        System.out.println("Türkçe notunuzu giriniz:");
+        int turk= klavye.nextInt();
+        System.out.println("Tarih notunuzu giriniz:");
+        int history= klavye.nextInt();
+        System.out.println("Müzik notunuzu giriniz:");
+        int music= klavye.nextInt();
+        double ortalama=(math+pyhsics+chemicals+turk+history+music)/6;
+        /*if(ortalama<60)
+            System.out.println("Sınıfta kaldı.");
+        else
+            System.out.println("Sınıfı geçti.");*/ //Böyle de yapılabilirdi.
+        String durum = (ortalama >= 60) ? "Geçtiniz!" : "Kaldınız!";
+        System.out.println("Not Ortalamanız: " + ortalama);
+        System.out.println(durum);
+       }
+    }
