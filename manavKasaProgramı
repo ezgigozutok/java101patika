@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double toplamTutar = 0;
+        String devam;
+
+        do {
+            System.out.print("Ürün adını girin: ");
+            String urun = scanner.nextLine();
+            System.out.print("Kilogram değerini girin: ");
+            double kilogram = scanner.nextDouble();
+            System.out.print("Ürün fiyatını girin (kg başına): ");
+            double fiyat = scanner.nextDouble();
+
+            double tutar = kilogram * fiyat;
+            toplamTutar += tutar;
+
+            System.out.print("Başka ürün eklemek ister misiniz? (E/H): ");
+            devam = scanner.next();
+            scanner.nextLine(); // Yeni satır karakterini temizle
+        } while (devam.equalsIgnoreCase("E"));
+
+        System.out.printf("Toplam Tutar: %.2f TL%n", toplamTutar);
+        scanner.close();
+    }
+}
