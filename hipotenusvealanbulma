@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+import static java.lang.Math.sqrt;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner girdi=new Scanner(System.in);
+        System.out.println("Birinci dik kenarın uzunluğunu giriniz.");
+        int birinciKenar=girdi.nextInt();
+        System.out.println("İkinci dik kenarın uzunluğunu giriniz.");
+        int ikinciKenar=girdi.nextInt();
+        double hipotenus=sqrt(birinciKenar*birinciKenar+ikinciKenar*ikinciKenar);
+        double cevre= hipotenus+birinciKenar+ikinciKenar;
+        double alan=sqrt(cevre/2*(cevre/2-birinciKenar)*(cevre/2-ikinciKenar)*(cevre/2-hipotenus));
+        System.out.println("Hipotenüüsn uzunuluğu:"+hipotenus);
+        System.out.println("Çevrenin uzunluğu:"+ cevre);
+        System.out.println("Alanı:"+alan);
+        }
+    }
