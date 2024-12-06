@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+      Scanner klavye=new Scanner(System.in);
+        System.out.println("Lütfen tutarı giriniz.");
+        double tutar=klavye.nextDouble();
+        if(tutar>=0){
+            double kdv;
+            if (tutar<=1000) {
+                kdv = tutar * 18 / 100;
+            }
+            else {
+                kdv = tutar * 8 / 100;
+            }
+            double kdvliTutar= kdv + tutar;
+            System.out.println("KDV tutarınız:"+ kdv);
+            System.out.println("KDV'li fiyat:"+ kdvliTutar);
+
+        }
+         else {
+             System.out.println("Yanlış bir değer girdiniz.");
+        }
+    }
+}
